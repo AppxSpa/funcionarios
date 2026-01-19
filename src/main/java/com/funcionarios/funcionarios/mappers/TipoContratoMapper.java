@@ -12,6 +12,7 @@ public class TipoContratoMapper {
     public TipoContrato mapToEntity(TipoContratoRequest request) {
         TipoContrato tipoContrato = new TipoContrato();
         tipoContrato.setNombre(request.getNombre());
+        tipoContrato.setActivo(request.isActivo());
         return tipoContrato;
     }
 

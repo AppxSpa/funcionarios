@@ -35,7 +35,8 @@ public class TipoContratoServiceImpl implements TipoContratoService {
                     request);
             tipoContratoRepository.save(updatedTipoContrato);
         } else {
-            tipoContratoMapper.mapToEntity(request);
+            TipoContrato contrato = tipoContratoMapper.mapToEntity(request);
+            tipoContratoRepository.save(contrato);
         }
 
     }
