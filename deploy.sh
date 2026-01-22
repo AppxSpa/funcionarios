@@ -1,3 +1,6 @@
+
+sudo docker pull mirkogutierrezappx/funcionarios:latest
+
 sudo docker stop funcionarios-container 2>/dev/null
 sudo docker rm funcionarios-container 2>/dev/null
 
@@ -9,4 +12,5 @@ sudo docker run \
            --env-file .env \
            --network appx \
            --add-host=host.docker.internal:host-gateway \
-           --name funcionarios-container funcionarios
+           --name funcionarios-container funcionarios \
+        mirkogutierrezappx/funcionarios:latest
